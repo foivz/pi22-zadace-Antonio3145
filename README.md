@@ -15,7 +15,7 @@ A sada, vrijeme je da malo izmijenite ovaj dokument. Za upis/opis vašeg program
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Antonio Brković | abrkovic20@foi.hr | 000000000 | Antonio3145
+Antonio Brković | abrkovic20@foi.hr | 0016147871 | abrkovic
 
 
 ## Opis domene
@@ -25,7 +25,7 @@ Umjesto ovih uputa vlastitim riječima opišite domenu ili problem koji pokriva 
 Umjesto ovih uputa vlastitim riječima opišite zahtjeve za funkcionalnošću programskog proizvoda.
 
 ## Zadatak
-U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje.
+https://github.com/foivz/pi22-zadace-Antonio3145/blob/1e0fcd1af7bb39f224b34478cdd46d04861c52bb/Zadatak%20-%20sticeni%20objekti.pdf
 
 ## Resursi
 Github Markdown sintaksa dostupna je na [ovom linku](https://guides.github.com/features/mastering-markdown/) ali i na Moodleu u sekciji Zadaće.
