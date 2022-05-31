@@ -54,6 +54,28 @@ namespace InmateTracker.Repozitorij
             return osobnis;
         }
 
+        public static List<OsobniUredaj> GetOsobni3(string ImePrez)
+        {
+            List<OsobniUredaj> osobnis = new List<OsobniUredaj>();
+
+            string sql = $"SELECT * FROM Osobni_uredaji WHERE Ime_vlasnika LIKE '{ImePrez}%';";
+            DB.SetConfiguration("abrkovic20_DB", "abrkovic20", "[[9{y#W_");
+
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+            while (reader.Read())
+            {
+                OsobniUredaj osobni = CreateObject(reader);
+                osobnis.Add(osobni);
+
+            }
+
+            reader.Close();
+            DB.CloseConnection();
+
+            return osobnis;
+        }
+
         private static OsobniUredaj CreateObject(SqlDataReader reader)
         {
             int ID_uredaja = int.Parse(reader["ID_uredaja"].ToString());

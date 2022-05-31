@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace InmateTracker
 {
-    public partial class Form2 : Form
+    public partial class FrmDodavanje : Form
     {
         OsobniUredaj osobni = new OsobniUredaj();
 
-        public Form2()
+        public FrmDodavanje()
         {
             InitializeComponent();
         }

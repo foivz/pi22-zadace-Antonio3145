@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace InmateTracker
 {
-    public partial class Form1 : Form
+    public partial class FrmPocetna : Form
     {
         OsobniUredaj osobni = new OsobniUredaj();
-        public Form1()
+        public FrmPocetna()
         {
             InitializeComponent();
         }
@@ -35,7 +35,7 @@ namespace InmateTracker
         private void BtnUredi_Click(object sender, EventArgs e)
         {
             frmUredi formaZaUredivanje = new frmUredi();
-            Form1 trenutnaForma = new Form1();
+            FrmPocetna trenutnaForma = new FrmPocetna();
             OsobniUredaj trenutni = dgvOsobniUredaji.CurrentRow.DataBoundItem as OsobniUredaj;
             string test1;
 
@@ -47,7 +47,7 @@ namespace InmateTracker
 
         private void BtnDodaj_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            FrmDodavanje form2 = new FrmDodavanje();
             form2.ShowDialog();
         }
 
@@ -60,16 +60,19 @@ namespace InmateTracker
 
         private void BtnObrisi_Click(object sender, EventArgs e)
         {
-            OsobniUredaj trenutni = dgvOsobniUredaji.CurrentRow.DataBoundItem as OsobniUredaj;
+            if (dgvOsobniUredaji.SelectedRows.Count != 0)
+            {
+                OsobniUredaj trenutni = dgvOsobniUredaji.CurrentRow.DataBoundItem as OsobniUredaj;
 
-            
-            PromjeneOsobni.BrisanjeOsobnog(trenutni);
+
+                PromjeneOsobni.BrisanjeOsobnog(trenutni);
+            }
 
         }
 
         private void btnPretrazi_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            FrmPretrazivanje form3 = new FrmPretrazivanje();
             form3.ShowDialog();
 
            // PromjeneOsobni.PretraziOsobnog(this.osobni);
